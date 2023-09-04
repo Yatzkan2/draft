@@ -1,12 +1,19 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "social_media";
-$users_table_name = "users";
-$posts_table_name = "posts";
-$users_columns = ["user_id int primary key", "email varchar(255) unique", "active boolean"];
-$posts_columns = ["post_id int primary key", "author_id int", "title varchar(255)","content varchar(1000)", "posted date", "active boolean"];
-$users_api_url = "https://jsonplaceholder.typicode.com/users/";
-$posts_api_url = "https://jsonplaceholder.typicode.com/posts/";
+define('SERVERNAME', 'localhost');
+define('USERNAME', 'root');
+define('PASSWORD', '');
+define('DBNAME', 'test_db');
+define('USERS_TABLE_NAME', 'users');
+define('POSTS_TABLE_NAME', 'posts');
+
+define('USERS_COLUMNS', ['user_id int primary key', 'email varchar(255) unique', 'birthday date', 'active_user boolean']);
+define('USERS_COL_NAMES', ['user_id', 'email', 'birthday', 'active_user']);
+
+define('POSTS_COLUMNS', ['post_id int primary key', 'author_id int', 'title varchar(255)', 'content varchar(1000)', 'posted_date date', 'posted_time time', 'active_post boolean']);
+define('POSTS_COL_NAMES', ['post_id', 'author_id', 'title', 'content', 'posted_date', 'posted_time', 'active_post']);
+
+define('USERS_API_URL', 'https://jsonplaceholder.typicode.com/users/');
+define('POSTS_API_URL', 'https://jsonplaceholder.typicode.com/posts/');
+define('IMG_URL', 'https://cdn2.vectorstock.com/i/1000x1000/23/81/default-avatar-profile-icon-vector-18942381.jpg');
+define('IMG_FOLDER_PATH', 'images/');
 ?>
